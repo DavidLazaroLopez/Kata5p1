@@ -13,13 +13,9 @@ public class Kata5P1 {
         Connection con = DriverManager.getConnection("jdbc:sqlite:Kata5.db");
         
         Statement st = con.createStatement();
-        String query = "SELECT * FROM PEOPLE";
-        ResultSet rs = st.executeQuery(query);
         
-        while(rs.next()){
-            System.out.println(rs.getInt(1));
-            System.out.println(rs.getString(2));
         }
+        ResultSet executeQuery =st.executeQuery("create table a ('Id' integer primary key autoincrement, 'Mail' text not null);");
     }
     
-}
+
